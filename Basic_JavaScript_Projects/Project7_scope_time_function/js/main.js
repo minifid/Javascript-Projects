@@ -1,4 +1,4 @@
-
+//saya if they are closed or not
 function Hours(){
     if (new Date().getHours() < 17 || new Date().getHours() > 9){
         document.getElementById("hours").innerHTML="Hello, how can we help today"
@@ -7,6 +7,7 @@ function Hours(){
     }
 }
 
+//tells you if it is morning/afternoon/evening
 function Time_function() {
     var time = new Date().getHours();
     var reply;
@@ -22,10 +23,10 @@ function Time_function() {
     document.getElementById("time_of_day").innerHTML = reply
 }
 
-var num1 = 19;
+var num1 = 19; //global
 function my_fucntion(){
-    console.log('test')
-    var num2=5;
+    console.log('test') // since this does not display i know the function is not being call rather than having an issue within
+    var num2=5; //local
     var sum = num1 + num2
     document.getElementById('math').innerHTML = sum
 }
