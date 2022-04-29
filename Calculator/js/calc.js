@@ -28,15 +28,12 @@ function Handle_Operator(Next_Operator) {
     const { First_Operand, Display_Value, operator } = Calculator;
     const Value_of_Input = parseFloat(Display_Value);
     if (operator && Calculator.Wait_Second_Operand) {
-        console.log('operator && Calculator.Wait_Second_Operand')
         Calculator.operator = Next_Operator;
         return;
     }
     if (First_Operand == null) {
-        console.log('First_Operand == null')
-        Calculator.First_operand = Value_of_Input;
+        Calculator.First_Operand = Value_of_Input;
     } else if (operator) {
-        console.log(result)
         const Value_Now = First_Operand || 0;
         let result = Perform_Calculation[operator](Value_Now, Value_of_Input);
         result = Number(result).toFixed(9)
